@@ -64,25 +64,25 @@ Most cryptocurrency exchanges close their daily candles at **00:00 UTC**. This i
 
 See how the default 00:00 UTC close time affects traders in different locations, and how **OHLC Forge** solves this problem:
 
-### 🇩🇪 Hans from Berlin (Germany, CET = UTC+1)
+### <img src="images/DE.svg" alt="DE" height="20" align="absmiddle"> Hans from Berlin (Germany, CET = UTC+1)
 *   **Default UTC+0:** `01:00` (middle of the night)
 *   **With OHLC Forge:** `22:00` (relaxed evening)
 > *"I was setting alarms for 1 AM every night. Now I update my data at 10 PM and sleep well."*
 > **Recommended: UTC+3**
 
-### 🇨🇳 Wei from Shanghai (China, CST = UTC+8)
+### <img src="images/CN.svg" alt="CN" height="20" align="absmiddle"> Wei from Shanghai (China, CST = UTC+8)
 *   **Default UTC+0:** `08:00` (morning rush hour)
 *   **With OHLC Forge:** `21:00` (calm evening)
 > *"An 8 AM bar close meant rushing before work. Now I trade comfortably after dinner."*
 > **Recommended: UTC+11**
 
-### 🇳🇿 Emma from Auckland (New Zealand, NZDT = UTC+13 in summer)
+### <img src="images/NZ.svg" alt="NZ" height="20" align="absmiddle"> Emma from Auckland (New Zealand, NZDT = UTC+13 in summer)
 *   **Default UTC+0:** `13:00` (lunch at work)
 *   **With OHLC Forge:** `22:00` (home sweet home)
 > *"I couldn't check my system during my lunch break at work. Evening trading changed everything."*
 > **Recommended: UTC+15**
 
-### 🇺🇸 Mike from Los Angeles (USA West Coast, PST = UTC-8)
+### <img src="images/US.svg" alt="US" height="20" align="absmiddle"> Mike from Los Angeles (USA West Coast, PST = UTC-8)
 *   **Default UTC+0:** `16:00` (still at work)
 *   **With OHLC Forge:** `21:00` (evening at home)
 > *"Default close time was during my commute. Now I trade after putting the kids to bed."*
@@ -96,15 +96,15 @@ Find your location and recommended setting for evening (21:00–22:00) data upda
 
 | Location | Local Offset | Default Close (00:00 UTC) | Problem | Recommended Setting | New Close (Local Time) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 🇩🇪 **Germany** | UTC+1 / +2 | 01:00 / 02:00 | 🌙 Middle of night | **UTC+3** | ✨ 22:00 / 23:00 |
-| 🇬🇧 **UK** | UTC+0 / +1 | 00:00 / 01:00 | 🌙 Midnight | **UTC+2** | ✨ 22:00 / 23:00 |
-| 🇨🇳 **China** | UTC+8 | 08:00 | 🏃 Morning rush | **UTC+11** | ✨ 21:00 |
-| 🇯🇵 **Japan** | UTC+9 | 09:00 | 💼 Work hours | **UTC+12** | ✨ 21:00 |
-| 🇳🇿 **New Zealand** | UTC+12 / +13 | 12:00 / 13:00 | 🍽️ Lunch break | **UTC+15** | ✨ 21:00 / 22:00 |
-| 🇦🇺 **Sydney** | UTC+10 / +11 | 10:00 / 11:00 | 💼 Work hours | **UTC+13** | ✨ 21:00 / 22:00 |
-| 🇺🇸 **Los Angeles** | UTC-8 / -7 | 16:00 / 17:00 | 💼 Still at work | **UTC-5** | ✨ 21:00 / 22:00 |
-| 🇺🇸 **New York** | UTC-5 / -4 | 19:00 / 20:00 | 🍽️ Dinner time | **UTC-2** | ✨ 21:00 / 22:00 |
-| 🇧🇷 **São Paulo** | UTC-3 | 21:00 | ✓ Already good! | **UTC+0** | ✨ 21:00 |
+| <img src="images/DE.svg" alt="DE" height="20" align="absmiddle"> **Germany** | UTC+1 / +2 | 01:00 / 02:00 | 🌙 Middle of night | **UTC+3** | ✨ 22:00 / 23:00 |
+| <img src="images/GB.svg" alt="GB" height="20" align="absmiddle"> **UK** | UTC+0 / +1 | 00:00 / 01:00 | 🌙 Midnight | **UTC+2** | ✨ 22:00 / 23:00 |
+| <img src="images/CN.svg" alt="CN" height="20" align="absmiddle"> **China** | UTC+8 | 08:00 | 🏃 Morning rush | **UTC+11** | ✨ 21:00 |
+| <img src="images/JP.svg" alt="JP" height="20" align="absmiddle"> **Japan** | UTC+9 | 09:00 | 💼 Work hours | **UTC+12** | ✨ 21:00 |
+| <img src="images/NZ.svg" alt="NZ" height="20" align="absmiddle"> **New Zealand** | UTC+12 / +13 | 12:00 / 13:00 | 🍽️ Lunch break | **UTC+15** | ✨ 21:00 / 22:00 |
+| <img src="images/AU.svg" alt="AU" height="20" align="absmiddle"> **Sydney** | UTC+10 / +11 | 10:00 / 11:00 | 💼 Work hours | **UTC+13** | ✨ 21:00 / 22:00 |
+| <img src="images/US.svg" alt="US" height="20" align="absmiddle"> **Los Angeles** | UTC-8 / -7 | 16:00 / 17:00 | 💼 Still at work | **UTC-5** | ✨ 21:00 / 22:00 |
+| <img src="images/US.svg" alt="US" height="20" align="absmiddle"> **New York** | UTC-5 / -4 | 19:00 / 20:00 | 🍽️ Dinner time | **UTC-2** | ✨ 21:00 / 22:00 |
+| <img src="images/BR.svg" alt="BR" height="20" align="absmiddle"> **São Paulo** | UTC-3 | 21:00 | ✓ Already good! | **UTC+0** | ✨ 21:00 |
 
 > ⚠️ **Important: UTC Offsets Are Fixed, Your Local Time Changes**
 > The time zone settings in OHLC Forge (e.g., UTC+3) are **fixed UTC offsets**, not dynamic time zones that adjust for Daylight Saving Time (DST). The daily bar always closes at exactly the same moment in UTC. However, your local clock time for that moment will shift by 1 hour when your region switches between standard time and daylight saving time.
