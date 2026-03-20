@@ -1,6 +1,7 @@
-# OHLC Forge PRO — Daily Bars for Crypto Perpetuals in Your Time Zone
+# OHLC Forge PRO
+# Daily Bars for Crypto Perpetuals in Your Time Zone
 
-Download the entire historical daily data database for Bybit and Binance perpetual markets and set your own session open and close times.
+Build the entire historical daily data database for Bybit and Binance perpetual markets and set your own session open and close times.
 
 ![OHLC Forge Banner](images/whole_window_new.png)
 
@@ -15,12 +16,7 @@ Seamlessly update your database with missing bars, fill historical gaps, or perf
 ![Operation Modes](images/operation_mode.png)
 
 ### High-Quality CSV Output
-OHLC Forge generates clean, standard CSV files compatible with **AmiBroker, TradingView, Excel, Python (Pandas)**, and any other technical analysis software. All prices are formatted with a fixed number of decimal places, strictly following the market specification (tick size).
-
-![Sample Output](images/sample_output_data.png)
-
-#### 🎯 Professional Decimal Precision
-The application retrieves the official tick size (price precision) from each exchange and formats all prices accordingly.
+OHLC Forge generates clean, standard CSV files compatible with **AmiBroker, TradingView, Excel, Python (Pandas)**, and any other technical analysis software. All prices are formatted with a fixed number of decimal places, strictly following the market specification (tick size). The application retrieves the official tick size (price precision) from each exchange and formats all prices accordingly.
 
 **📈 High-Price Market (BTC)**  
 Bitcoin trades with **1 decimal place** precision:
