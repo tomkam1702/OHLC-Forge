@@ -1,4 +1,4 @@
-# OHLC Forge PRO
+﻿# OHLC Forge PRO
 # Daily Bars for Crypto Perpetuals in Your Time Zone
 
 Build the entire historical daily data database for Bybit and Binance perpetual markets and set your own session open and close times.
@@ -96,15 +96,15 @@ Find your location and recommended setting for evening (21:00–22:00) data upda
 
 | Location | Local Offset | Default Close (00:00 UTC) | Problem | Recommended Setting | New Close (Local Time) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| <img src="images/DE.svg" alt="DE" height="20" align="absmiddle"> **Germany** | UTC+1 / +2 | 01:00 / 02:00 | 🌙 Middle of night | **UTC+3** | ✨ 22:00 / 23:00 |
-| <img src="images/GB.svg" alt="GB" height="20" align="absmiddle"> **UK** | UTC+0 / +1 | 00:00 / 01:00 | 🌙 Midnight | **UTC+2** | ✨ 22:00 / 23:00 |
-| <img src="images/CN.svg" alt="CN" height="20" align="absmiddle"> **China** | UTC+8 | 08:00 | 🏃 Morning rush | **UTC+11** | ✨ 21:00 |
-| <img src="images/JP.svg" alt="JP" height="20" align="absmiddle"> **Japan** | UTC+9 | 09:00 | 💼 Work hours | **UTC+12** | ✨ 21:00 |
-| <img src="images/NZ.svg" alt="NZ" height="20" align="absmiddle"> **New Zealand** | UTC+12 / +13 | 12:00 / 13:00 | 🍽️ Lunch break | **UTC+15** | ✨ 21:00 / 22:00 |
-| <img src="images/AU.svg" alt="AU" height="20" align="absmiddle"> **Sydney** | UTC+10 / +11 | 10:00 / 11:00 | 💼 Work hours | **UTC+13** | ✨ 21:00 / 22:00 |
-| <img src="images/US.svg" alt="US" height="20" align="absmiddle"> **Los Angeles** | UTC-8 / -7 | 16:00 / 17:00 | 💼 Still at work | **UTC-5** | ✨ 21:00 / 22:00 |
-| <img src="images/US.svg" alt="US" height="20" align="absmiddle"> **New York** | UTC-5 / -4 | 19:00 / 20:00 | 🍽️ Dinner time | **UTC-2** | ✨ 21:00 / 22:00 |
-| <img src="images/BR.svg" alt="BR" height="20" align="absmiddle"> **São Paulo** | UTC-3 | 21:00 | ✓ Already good! | **UTC+0** | ✨ 21:00 |
+| <img src="images/DE.svg" alt="DE" height="20" align="absmiddle"><br>**Germany** | UTC+1 / +2 | 01:00 / 02:00 | 🌙 Middle of night | **UTC+3** | ✨ 22:00 / 23:00 |
+| <img src="images/GB.svg" alt="GB" height="20" align="absmiddle"><br>**United Kingdom** | UTC+0 / +1 | 00:00 / 01:00 | 🌙 Midnight | **UTC+2** | ✨ 22:00 / 23:00 |
+| <img src="images/CN.svg" alt="CN" height="20" align="absmiddle"><br>**China** | UTC+8 | 08:00 | 🏃 Morning rush | **UTC+11** | ✨ 21:00 |
+| <img src="images/JP.svg" alt="JP" height="20" align="absmiddle"><br>**Japan** | UTC+9 | 09:00 | 💼 Work hours | **UTC+12** | ✨ 21:00 |
+| <img src="images/NZ.svg" alt="NZ" height="20" align="absmiddle"><br>**New Zealand** | UTC+12 / +13 | 12:00 / 13:00 | 🍽️ Lunch break | **UTC+15** | ✨ 21:00 / 22:00 |
+| <img src="images/AU.svg" alt="AU" height="20" align="absmiddle"><br>**Sydney** | UTC+10 / +11 | 10:00 / 11:00 | 💼 Work hours | **UTC+13** | ✨ 21:00 / 22:00 |
+| <img src="images/US.svg" alt="US" height="20" align="absmiddle"><br>**Los Angeles** | UTC-8 / -7 | 16:00 / 17:00 | 💼 Still at work | **UTC-5** | ✨ 21:00 / 22:00 |
+| <img src="images/US.svg" alt="US" height="20" align="absmiddle"><br>**New York** | UTC-5 / -4 | 19:00 / 20:00 | 🍽️ Dinner time | **UTC-2** | ✨ 21:00 / 22:00 |
+| <img src="images/BR.svg" alt="BR" height="20" align="absmiddle"><br>**São Paulo** | UTC-3 | 21:00 | ✓ Already good! | **UTC+0** | ✨ 21:00 |
 
 > ⚠️ **Important: UTC Offsets Are Fixed, Your Local Time Changes**
 > The time zone settings in OHLC Forge (e.g., UTC+3) are **fixed UTC offsets**, not dynamic time zones that adjust for Daylight Saving Time (DST). The daily bar always closes at exactly the same moment in UTC. However, your local clock time for that moment will shift by 1 hour when your region switches between standard time and daylight saving time.
@@ -159,3 +159,4 @@ Stop staying up late or missing signals. Get daily crypto data that closes when 
 5. **No Affiliation:** OHLC Forge PRO is an independent software product and is not affiliated with Binance, Bybit, or CCXT.
 6. **No Financial Advice & "As Is" Warranty:** This Software is provided "as is". Nothing in this product constitutes financial advice. Past performance does not guarantee future results.
 7. **LIMITATION OF LIABILITY:** IN NO EVENT SHALL THE DEVELOPER BE LIABLE FOR ANY DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE USE OF THIS SOFTWARE.
+
