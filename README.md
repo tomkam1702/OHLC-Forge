@@ -4,20 +4,47 @@ Download the entire historical daily data database for Bybit and Binance perpetu
 
 ![OHLC Forge Banner](images/whole_window_new.png)
 
-### Professional User Interface
-The application features a clean, high-DPI aware interface that allows you to manage hundreds of perpetual pairs with ease.
-
-![Main Window](images/whole_window_new.png)
-
 ### Precise Configuration
 Choose from **40 different time zone offsets** (from UTC-20 to UTC+20) to perfectly match your local evening routine.
 
 ![Configuration](images/configuration_new.png)
 
+### Three Operation Modes
+Seamlessly update your database with missing bars, fill historical gaps, or perform a full redownload from a specific date.
+
+![Operation Modes](images/operation_mode.png)
+
 ### High-Quality CSV Output
 OHLC Forge generates clean, standard CSV files compatible with **AmiBroker, TradingView, Excel, Python (Pandas)**, and any other technical analysis software. All prices are formatted with a fixed number of decimal places, strictly following the market specification (tick size).
 
 ![Sample Output](images/sample_output_data.png)
+
+#### 🎯 Professional Decimal Precision
+The application retrieves the official tick size (price precision) from each exchange and formats all prices accordingly.
+
+**📈 High-Price Market (BTC)**  
+Bitcoin trades with **1 decimal place** precision:
+```csv
+20251201,90308.6,90374.4,83755.3,86244.1,12214858119
+20251202,86244.1,92298.9,86148.4,91241.7,9616542596
+20251203,91241.7,94189.4,90945.0,93390.1,9571207300
+20251204,93390.1,94058.1,90800.0,92031.8,6933686131
+20251205,92031.8,92658.3,88002.1,89273.7,8427872957
+```
+
+**💎 Low-Price Market (Meme Coin)**  
+Markets like 1000000BABYDOGEUSDT use **7 decimal places**:
+```csv
+20251201,0.0006972,0.0006982,0.0006300,0.0006585,1068182
+20251202,0.0006585,0.0007163,0.0006510,0.0007028,859501
+20251203,0.0007028,0.0007599,0.0007028,0.0007516,1067822
+20251204,0.0007516,0.0007654,0.0007113,0.0007137,573909
+```
+
+### Professional Update Logs
+Monitor your download progress, API rate limits, and network connection status in real-time through a clear, professional text log.
+
+![Update Log](images/update_log.png)
 
 ---
 
