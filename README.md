@@ -11,8 +11,12 @@ Build your own historical daily data database for Binance and Bybit perpetual ma
 
 ## ⚡ Quick Navigation
 
-| [🚀 Get OHLC Forge PRO (Gumroad)](https://gumroad.com/l/ohlc-forge) | [🎁 Download FREE Demo (.exe)](https://github.com/tomkam1702/OHLC-Forge/releases) | [📖 Full User Guide (Online)](https://tomkam1702.github.io/OHLC-Forge/user_guide.html) |
+| [🚀 Download OHLC Forge PRO](https://github.com/tomkam1702/OHLC-Forge/releases) | [🎁 Download OHLC Forge FREE Demo](https://github.com/tomkam1702/OHLC-Forge/releases) | [📖 Full User Guide (Online)](https://tomkam1702.github.io/OHLC-Forge/user_guide.html) |
 | :--- | :--- | :--- |
+
+<br>
+
+**[💎 Get OHLC Forge PRO licence (Gumroad)](https://gumroad.com/l/ohlc-forge)**
 
 ---
 
