@@ -181,10 +181,16 @@ Stop staying up late or missing signals. Get daily crypto data that closes when 
 
 ## ⚖️ Legal Disclaimer and Terms of Use
 
-1. **Software Tool Nature:** OHLC Forge PRO is a technical utility designed solely to facilitate the downloading and processing of public market data. It does not contain or distribute any financial market data.
-2. **Third-Party Libraries:** The Software utilises the open-source CCXT library to interface with cryptocurrency exchanges.
-3. **User-Initiated Data Access:** All data is downloaded directly by the user from third-party exchanges (e.g., Binance, Bybit) using their public APIs.
-4. **User Responsibility:** It is your sole responsibility to ensure that your use of these APIs complies with the respective Terms of Service and rate limits.
-5. **No Affiliation:** OHLC Forge PRO is an independent software product and is not affiliated with Binance, Bybit, or CCXT.
-6. **No Financial Advice & "As Is" Warranty:** This Software is provided "as is". Nothing in this product constitutes financial advice. Past performance does not guarantee future results.
-7. **LIMITATION OF LIABILITY:** IN NO EVENT SHALL THE DEVELOPER BE LIABLE FOR ANY DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE USE OF THIS SOFTWARE.
+**1. Software Tool Nature:** OHLC Forge PRO ("the Software") is a technical utility designed solely to facilitate the downloading and processing of public market data. The Software is sold strictly as a data processing tool. It does not contain, resell, or distribute any financial market data, historical price data, or exchange feeds.
+
+**2. Third-Party Libraries:** The Software utilises the open-source CCXT library (MIT Licence) to interface with cryptocurrency exchanges. CCXT is an independent project and is not affiliated with OHLC Forge PRO.
+
+**3. User-Initiated Data Access:** All data processed by the Software is downloaded directly by the user from third-party exchanges (e.g., Binance, Bybit) using their public Application Programming Interfaces (APIs). The Software acts merely as an interface to execute these requests on the user's behalf and on the user's local machine.
+
+**4. User Responsibility:** You, the user, acknowledge that you are accessing these APIs directly. It is your sole responsibility to ensure that your use of these APIs, including the frequency and purpose of data requests, complies with the respective Terms of Service, API Usage Policies, and rate limits as published by each exchange. Violations of exchange rate limits may result in temporary or permanent API access restrictions imposed by the exchange, for which the developer bears no responsibility.
+
+**5. No Affiliation:** OHLC Forge PRO is an independent software product and is not affiliated with, endorsed by, sponsored by, or in any way officially connected with Binance, Bybit, CCXT, or any of their subsidiaries or affiliates. "Binance" and "Bybit" are registered trademarks of their respective owners.
+
+**6. No Financial Advice & "As Is" Warranty:** This Software is provided "as is", without warranty of any kind, express or implied. The developer makes no representations or warranties regarding the accuracy, completeness, or reliability of the data fetched by the Software. Nothing in this product or documentation constitutes financial, investment, or trading advice. Past performance of any trading system does not guarantee future results.
+
+**7. LIMITATION OF LIABILITY:** IN NO EVENT SHALL THE DEVELOPER, COPYRIGHT HOLDERS, OR CONTRIBUTORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, OR USE, ARISING OUT OF OR IN CONNECTION WITH THE USE OF THIS SOFTWARE, REGARDLESS OF THE CAUSE OF ACTION OR THE THEORY OF LIABILITY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
