@@ -14,7 +14,7 @@ Build your own historical daily data database for Binance and Bybit perpetual ma
 <table>
   <tr>
     <td align="center"><a href="https://github.com/tomkam1702/OHLC-Forge/releases">🚀 Download OHLC Forge PRO</a></td>
-    <td align="center"><a href="https://github.com/tomkam1702/OHLC-Forge/releases">🎁 Download OHLC Forge FREE Demo</a></td>
+    <td align="center"><a href="https://github.com/tomkam1702/OHLC-Forge/releases">🎁 Download OHLC Forge FREE (Demo)</a></td>
     <td align="center"><a href="https://tomkam1702.github.io/OHLC-Forge/user_guide.html">📖 Full User Guide (Online)</a></td>
   </tr>
   <tr>
@@ -30,7 +30,7 @@ Build your own historical daily data database for Binance and Bybit perpetual ma
 
 Experience the power of custom time zones. Start with the Free Demo and upgrade when you're ready for the full market.
 
-| Feature | FREE Demo | OHLC Forge PRO |
+| Feature | OHLC Forge FREE (Demo) | OHLC Forge PRO |
 | :--- | :--- | :--- |
 | **Exchanges** | Binance, Bybit | **Binance, Bybit** |
 | **Supported Symbols** | BTC/USDT, ETH/USDT | **All (600+) Perpetual Pairs** |
