@@ -59,7 +59,7 @@ OHLC Forge generates clean, standard CSV files compatible with **AmiBroker, Trad
 
 **📈 High-Price Market (BTC)**  
 Bitcoin trades with **1 decimal place** precision:
-```csv
+```text
 20251201,90308.6,90374.4,83755.3,86244.1,12214858119
 20251202,86244.1,92298.9,86148.4,91241.7,9616542596
 20251203,91241.7,94189.4,90945.0,93390.1,9571207300
@@ -69,11 +69,12 @@ Bitcoin trades with **1 decimal place** precision:
 
 **💎 Low-Price Market (Meme Coin)**  
 Markets like 1000000BABYDOGEUSDT use **7 decimal places**:
-```csv
+```text
 20251201,0.0006972,0.0006982,0.0006300,0.0006585,1068182
 20251202,0.0006585,0.0007163,0.0006510,0.0007028,859501
 20251203,0.0007028,0.0007599,0.0007028,0.0007516,1067822
 20251204,0.0007516,0.0007654,0.0007113,0.0007137,573909
+20251205,0.0007137,0.0007195,0.0006547,0.0006754,1108743
 ```
 
 ### Professional Update Logs
