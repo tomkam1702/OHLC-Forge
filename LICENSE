@@ -1,0 +1,23 @@
+OHLC Forge Free Demo - End User License Agreement (EULA)
+
+Copyright (c) 2025-2026 Tomasz Kamiński. All rights reserved.
+
+END USER LICENSE AGREEMENT
+
+1. GRANT OF LICENSE
+By downloading, accessing, or using this repository and its source code (the "Software"), you are granted a limited, personal, non-exclusive, non-transferable, and revocable license to use the Software solely for personal, educational, and non-commercial purposes. 
+
+2. RESTRICTIONS
+You may NOT:
+a) Use this Software or any part of its source code (including trading logic, data fetching routines, and file structures) for direct or indirect commercial gain.
+b) Redistribute, rent, lease, sub-license, host, or sell the Software or any modified version thereof.
+c) Incorporate this source code, logic, or structure into any commercial software, trading bots, trading signal services, paid analytical tools, or platforms monetized by subscriptions or advertisements.
+d) Modify the Software for the purpose of removing licensing restrictions, copyright notices, or attribution headers.
+
+3. EDUCATIONAL AND DIDACTIC USE
+This version is provided strictly as demonstration software and educational material. You may review the code, compile it locally, and run it on your personal machine to evaluate its functionality, understand its mechanics, or as part of a learning process before deciding whether to purchase the full commercial PRO version.
+
+4. DISCLAIMER OF WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+By interacting with this Software, you acknowledge that you have read this agreement, understand its scope, and explicitly agree to be bound by its terms and conditions regarding commercial prohibition.
