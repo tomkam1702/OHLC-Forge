@@ -3,9 +3,9 @@
 </p>
 
 # OHLC Forge
-### Professional OHLCV Data Reconstruction for Crypto Traders
+### Professional OHLC Daily Data Reconstruction for Crypto Traders
 
-Build your own historical daily data database for Binance and Bybit perpetual markets with **custom session close times**. No more midnight alarms – trade on your own schedule.
+Build your own historical OHLC daily data database for Binance and Bybit perpetual markets with **custom session close times**. No more midnight alarms – trade on your own schedule.
 
 ---
 
