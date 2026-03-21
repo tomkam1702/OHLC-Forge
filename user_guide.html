@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OHLC Forge PRO - Complete User Guide</title>
+    <style>
+        :root {
+            --primary: #2980B9;
+            --secondary: #456990;
+            --accent: #F39C12;
+            --success: #27AE60;
+            --danger: #E74C3C;
+            --dark: #2C3E50;
+            --light: #F5F6F7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            color: var(--dark);
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid var(--primary);
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        header .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header .logo-icon {
+            font-size: 2.2em;
+        }
+
+        header h1 {
+            font-size: 1.6em;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        header .tagline {
+            font-size: 0.95em;
+            color: #666;
+            margin: 0;
+        }
+
+        header .doc-type {
+            background: var(--primary);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        section {
+            background: white;
+            margin: 25px 0;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent);
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: var(--secondary);
+            margin: 25px 0 15px 0;
+            font-size: 1.4em;
+        }
+
+        h4 {
+            color: var(--dark);
+            margin: 20px 0 10px 0;
+            font-size: 1.15em;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .screenshot {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .screenshot img {
+            max-width: 70%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .screenshot-caption {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .feature-box {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .feature-box h4 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        .warning-box {
+            background: #fff8e8;
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box {
+            background: #e8f8e8;
+            border-left: 4px solid var(--success);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-box {
+            background: #e8f4fd;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-box::before {
+            content: "💡 ";
+        }
+
+        code {
+            background: #f1f3f5;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.95em;
+            color: #c7254e;
+        }
+
+        pre {
+            background: #2C3E50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            padding: 14px 18px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .highlight-row {
+            background: #e8f4fd !important;
+        }
+
+        ul,
+        ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .mode-card {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 15px 0;
+            transition: box-shadow 0.3s;
+        }
+
+        .mode-card:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .mode-card h4 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .mode-card .mode-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .problem-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 25px 0;
+        }
+
+        .problem,
+        .solution {
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .problem {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            border: 2px solid var(--danger);
+        }
+
+        .solution {
+            background: linear-gradient(135deg, #f8e9d6, #fdf6e3);
+            color: var(--dark);
+            border: 2px solid var(--success);
+        }
+
+        .emoji-large {
+            font-size: 3.5em;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .time-big {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .problem .time-big {
+            color: var(--danger);
+        }
+
+        .solution .time-big {
+            color: var(--success);
+        }
+
+        .precision-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 20px 0;
+        }
+
+        .precision-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #e9ecef;
+        }
+
+        .precision-box h4 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .precision-box pre {
+            font-size: 0.85em;
+            margin: 0;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .toc ol {
+            margin-bottom: 0;
+        }
+
+        .toc a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            background: white;
+            margin-top: 30px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .grid-2,
+            .grid-3,
+            .problem-solution,
+            .precision-comparison {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            header h1 {
+                font-size: 1.4em;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            .screenshot img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-section">
+            <img src="OHLC_Forge_Pro/doc_images/OHLC_Forge_Logo.png" alt="OHLC Forge Logo" style="height: 50px; width: auto;">
+            <div>
+                <h1>OHLC Forge PRO</h1>
+                <p class="tagline">Daily Bars for Crypto Perpetuals in Your Time Zone</p>
+            </div>
+        </div>
+        <span class="doc-type">User Guide</span>
+    </header>
+
+    <div class="container">
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="toc">
+            <h3>📑 Table of Contents</h3>
+            <ol>
+                <li><a href="#introduction">Introduction &amp; Why Custom Time Zones Matter</a></li>
+                <li><a href="#licence">Licence Activation &amp; Requirements</a></li>
+                <li><a href="#interface">Application Interface Overview</a></li>
+                <li><a href="#configuration">Configuration Settings</a></li>
+                <li><a href="#operation-modes">Operation Modes Explained</a></li>
+                <li><a href="#execution">Starting and Monitoring the Process</a></li>
+                <li><a href="#logs">Text Update Logs</a></li>
+                <li><a href="#output-format">Output Data Format &amp; Precision</a></li>
+                <li><a href="#timezone-reference">Time Zone Quick Reference</a></li>
+                <li><a href="#workflow">Typical Workflow Examples</a></li>
+                <li><a href="#faq">Frequently Asked Questions</a></li>
+                <li><a href="#disclaimer">Important Disclaimer</a></li>
+            </ol>
+        </div>
+
+        <!-- SECTION 1: INTRODUCTION -->
+        <section id="introduction">
+            <h2>1. Introduction &amp; Why Custom Time Zones Matter</h2>
+
+            <p>
+                <strong>OHLC Forge PRO</strong> is a professional-grade application designed specifically for systematic
+                cryptocurrency traders who need historical daily OHLCV (Open, High, Low, Close, Volume) data with
+                <em>custom daily bar closing times</em>.
+            </p>
+
+            <h3>🎯 The Problem with Default Daily Bars</h3>
+
+            <p>
+                Most cryptocurrency exchanges close their daily candles at <strong>00:00 UTC</strong>.
+                This is an international standard, but it creates a real problem for systematic traders
+                who need to update their data and place orders every day.
+            </p>
+
+            <div class="problem-solution">
+                <div class="problem">
+                    <span class="emoji-large">🌙</span>
+                    <h4>Default: UTC+0</h4>
+                    <div class="time-big">00:00 – 02:00</div>
+                    <p>Daily bar closes at <strong>midnight UTC</strong></p>
+                    <p style="margin-top: 15px; opacity: 0.8;">
+                        For most traders, this means staying up late at night
+                        or waking up in the middle of the night to update data and place orders.
+                    </p>
+                </div>
+
+                <div class="solution">
+                    <span class="emoji-large">✨</span>
+                    <h4>Custom Time Zone</h4>
+                    <div class="time-big">21:00 – 22:00</div>
+                    <p>Daily bar closes at <strong>your chosen time</strong></p>
+                    <p style="margin-top: 15px;">
+                        Update your data, place your orders, and go to bed at a reasonable hour.
+                        Same trading system, same logic, better lifestyle.
+                    </p>
+                </div>
+            </div>
+
+            <h3>✨ Key Benefits</h3>
+            <ul>
+                <li><strong>Trade on Your Schedule:</strong> Choose when your daily bars close—evening, morning, or any
+                    time that fits your routine.</li>
+                <li><strong>Same Trading Logic:</strong> Your mechanical system works identically; only the timing
+                    changes.</li>
+                <li><strong>Better Quality of Life:</strong> No more midnight alarms or rushing during lunch breaks.
+                </li>
+                <li><strong>Professional Data Quality:</strong> Correct decimal precision, no scientific notation, clean
+                    CSV format.</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 2: LICENCE ACTIVATION -->
+        <section id="licence">
+            <h2>2. Licence Activation &amp; Requirements</h2>
+
+            <p>
+                <strong>OHLC Forge PRO</strong> is a professional tool that requires a valid licence to operate. 
+                The activation process is quick and designed to protect your purchase while providing flexibility.
+            </p>
+
+            <div class="feature-box">
+                <h4>🔑 How to Activate</h4>
+                <ol>
+                    <li><strong>First Launch:</strong> When you open the application for the first time, a licence dialog will appear.</li>
+                    <li><strong>Enter Your Key:</strong> Paste the licence key you received in your Gumroad confirmation email.</li>
+                    <li><strong>Online Verification:</strong> Click "Activate". The app will securely connect to our servers to validate your key.</li>
+                </ol>
+            </div>
+
+            <div class="tip-box">
+                <h4>Activation Rules</h4>
+                <ul>
+                    <li><strong>2 Devices Max:</strong> Each licence allows you to activate the software on up to <strong>two (2) different computers</strong> at the same time (e.g., your workstation and a laptop).</li>
+                    <li><strong>Transparent Hardware ID:</strong> The licence is tied to your hardware. If you upgrade your PC, you may need to reset your activations (contact support if needed).</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h4>💾 Important: The Licence File</h4>
+                <p>
+                    Once activated, a small file named <code>licence_data.json</code> is created.
+                </p>
+                <ul>
+                    <li><strong>Launch the App:</strong> Use the <code>Launch_OHLC_Forge_PRO.exe</code> file in the main folder to start the application.</li>
+                    <li><strong>Licence Location:</strong> The licence file <code>licence_data.json</code> is stored inside the <code>OHLC_Forge_Pro</code> subfolder.</li>
+                    <li><strong>Keep them together:</strong> The licence file MUST remain in the same folder as the main application file (<code>OHLC_Forge_PRO.exe</code> inside the <code>OHLC_Forge_Pro</code> subfolder).</li>
+                    <li><strong>Moving the App:</strong> The application is designed to work as a complete package. If you want to move the program to a different location, <strong>always move the entire main folder</strong> as a whole. Do not move <code>Launch_OHLC_Forge_PRO.exe</code> without the <code>OHLC_Forge_Pro</code> subfolder and its contents.</li>
+                    <li><strong>Do not share:</strong> This file contains your encrypted access token. Never share this file with anyone.</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <strong>Internet Connection:</strong> An active internet connection is required not only for activation, but also because the core purpose of this tool is to download and update real-time data—making it unusable without a connection.
+            </div>
+        </section>
+
+        <!-- SECTION 2: INTERFACE OVERVIEW -->
+        <section id="interface">
+            <h2>3. Application Interface Overview</h2>
+
+            <p>
+                OHLC Forge PRO features a clean, professional graphical interface designed for ease of use.
+                The application automatically adapts to your screen resolution and DPI settings.
+            </p>
+
+            <div class="screenshot">
+                <img src="OHLC_Forge_Pro/doc_images/whole_window_new.png" alt="OHLC Forge PRO Main Window">
+                <p class="screenshot-caption">Figure 1: The OHLC Forge PRO interface showing independent folders for each exchange</p>
+            </div>
+
+            <p>The interface is divided into four main areas:</p>
+
+            <ol>
+                <li><strong>Configuration Panel:</strong> Select exchanges, output folder, and time zone settings</li>
+                <li><strong>Operation Mode Panel:</strong> Choose the type of data operation to perform</li>
+                <li><strong>Control Buttons:</strong> Start and Stop buttons to control the download process</li>
+                <li><strong>Status Area:</strong> Progress bar and console showing real-time status updates</li>
+            </ol>
+        </section>
+
+        <!-- SECTION 3: CONFIGURATION -->
+        <section id="configuration">
+            <h2>4. Configuration Settings</h2>
+
+            <div class="screenshot">
+                <img src="OHLC_Forge_Pro/doc_images/configuration_new.png" alt="Configuration Panel">
+                <p class="screenshot-caption">Figure 2: The Configuration panel with independent folder selection for each exchange</p>
+            </div>
+
+            <h3>📡 Exchanges</h3>
+
+            <p>Select which exchanges to download data from:</p>
+
+            <div class="grid-2">
+                <div class="feature-box">
+                    <h4>Binance Perpetuals</h4>
+                    <p>Downloads all USD-margined perpetual futures contracts from Binance. This typically includes 600+
+                        trading pairs.</p>
+                    <p><strong>Output subfolder:</strong> <code>/Binance/</code></p>
+                    <p><strong>File naming:</strong> <code>BTCUSDT.csv</code>, <code>ETHUSDT.csv</code>, etc.</p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>Bybit Perpetuals</h4>
+                    <p>Downloads all USDT-margined linear perpetual contracts from Bybit. This typically includes 600+
+                        trading pairs.</p>
+                    <p><strong>Output subfolder:</strong> <code>/Bybit/</code></p>
+                    <p><strong>File naming:</strong> <code>BTCUSDT.csv</code>, <code>ETHUSDT.csv</code>, etc.</p>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                You can select both exchanges simultaneously. They are processed in parallel, and you can set separate destination folders for each to keep your data perfectly organized.
+            </div>
+
+            <h3>📁 Data Folders</h3>
+
+            <p>
+                Each exchange has its own independent <strong>Data Folder</strong> path. This allows you to store Binance and Bybit data on different drives or in specific project directories.
+            </p>
+
+            <ul>
+                <li>Click <strong>"Browse..."</strong> next to the exchange to select its specific folder.</li>
+                <li>The application automatically remembers both paths for your next session.</li>
+            </ul>
+
+            <div class="warning-box">
+                <h4>🛑 Folder Collision Prevention</h4>
+                <p>
+                    OHLC Forge PRO includes a safety check: <strong>Binance and Bybit must use different destination folders.</strong> 
+                    This prevents files with the same name (like <code>BTCUSDT.csv</code>) from overwriting each other or causing data corruption.
+                </p>
+            </div>
+
+            <h3>🕐 Daily Bar Time Zone</h3>
+
+            <p>
+                This is the most important setting. It determines when your daily bars close.
+                The dropdown offers 41 options from <strong>UTC−20</strong> to <strong>UTC+20</strong>.
+            </p>
+
+            <p>Each option shows:</p>
+            <ul>
+                <li>The time zone offset (e.g., <code>UTC+3</code>)</li>
+                <li>When the bar closes in UTC (e.g., <code>bar closes 21:00 UTC</code>)</li>
+                <li>Whether the date assignment is "same day" or "next day"</li>
+            </ul>
+
+            <div class="feature-box">
+                <h4>Understanding "Same Day" vs "Next Day"</h4>
+                <p>
+                    <strong>Same day:</strong> The bar labelled "15/01/2025" closes at the specified UTC time
+                    <em>on</em> 15 January.<br>
+                    <strong>Next day:</strong> The bar labelled "15/01/2025" closes at the specified UTC time
+                    <em>on</em> 16 January (i.e., the session ends on the next calendar day).
+                </p>
+                <p>This matches how traditional markets handle overnight sessions.</p>
+            </div>
+
+            <div class="tip-box">
+                Hover over the time zone dropdown to see a detailed tooltip showing exactly which 24-hour period is
+                captured for today's bar.
+            </div>
+        </section>
+
+        <!-- SECTION 4: OPERATION MODES -->
+        <section id="operation-modes">
+            <h2>5. Operation Modes Explained</h2>
+
+            <div class="screenshot">
+                <img src="OHLC_Forge_Pro/doc_images/operation_mode.png" alt="Operation Mode Panel">
+                <p class="screenshot-caption">Figure 3: The Operation Mode panel with three mode options and the
+                    optional start date field</p>
+            </div>
+
+            <p>OHLC Forge PRO offers three distinct operation modes to suit different scenarios:</p>
+
+            <div class="mode-card">
+                <div class="mode-icon">📥</div>
+                <h4>Update (Append new data only from last or specified date)</h4>
+                <p>
+                    <strong>Best for:</strong> Daily/weekly routine updates<br>
+                    <strong>What it does:</strong> Looks at each existing CSV file, finds the last date, and downloads
+                    only the missing days after that date.<br>
+                    <strong>Data handling:</strong> Existing data is preserved; new data is appended to the end of each
+                    file.
+                </p>
+                <div class="success-box">
+                    <strong>Use this mode for regular maintenance.</strong> It's the fastest option because it only
+                    downloads what's missing.
+                </div>
+            </div>
+
+            <div class="mode-card">
+                <div class="mode-icon">🔍</div>
+                <h4>Fill Gaps (Complete missing historical data from first or specified date)</h4>
+                <p>
+                    <strong>Best for:</strong> Fixing incomplete data, recovering from interrupted downloads<br>
+                    <strong>What it does:</strong> Scans each file for any missing dates within the data range,
+                    downloads only those missing days, and then sorts the file chronologically.<br>
+                    <strong>Data handling:</strong> Existing data is preserved; missing days are inserted and the file
+                    is re-sorted.
+                </p>
+                <div class="tip-box">
+                    If a previous download was interrupted or you suspect some days are missing, use this mode to repair
+                    your data files without re-downloading everything.
+                </div>
+            </div>
+
+            <div class="mode-card">
+                <div class="mode-icon">🔄</div>
+                <h4>Redownload (Overwrite history from first or specified date)</h4>
+                <p>
+                    <strong>Best for:</strong> Complete rebuilds, changing time zone settings, fixing corrupted data<br>
+                    <strong>What it does:</strong> Deletes all data from the specified "Start Date" onwards, then
+                    re-downloads everything from that date.<br>
+                    <strong>Data handling:</strong> Data before the start date is preserved; data from the start date
+                    onwards is replaced.
+                </p>
+                <div class="warning-box">
+                    <strong>⚠️ Caution:</strong> This mode will delete existing data. If you don't specify a start date,
+                    it defaults to 01/01/2020, effectively rebuilding your entire database.
+                </div>
+            </div>
+
+            <h3>📅 Start Date (Optional)</h3>
+
+            <p>The "Start Date" field is used differently depending on the mode:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mode</th>
+                        <th>Start Date Purpose</th>
+                        <th>Default if Empty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Update</strong></td>
+                        <td>Sets the earliest date to consider for new files (existing files use their last date)</td>
+                        <td>01/01/2020</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fill Gaps</strong></td>
+                        <td>Sets the earliest date to scan for gaps</td>
+                        <td>01/01/2020</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><strong>Redownload</strong></td>
+                        <td>All data from this date onwards will be deleted and re-downloaded</td>
+                        <td>01/01/2020</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Date format:</strong> <code>YYYY-MM-DD</code> (e.g., <code>2025-01-15</code>)</p>
+        </section>
+
+        <!-- SECTION 5: EXECUTION -->
+        <section id="execution">
+            <h2>6. Starting and Monitoring the Process</h2>
+
+            <div class="screenshot">
+                <img src="OHLC_Forge_Pro/doc_images/buttons_and_status.png" alt="Execution Controls and Status">
+                <p class="screenshot-caption">Figure 4: The START PROCESS and STOP buttons with progress bar and console
+                    output</p>
+            </div>
+
+            <h3>▶ START PROCESS</h3>
+
+            <p>Click the blue "START PROCESS" button to begin downloading data. Before starting, the application
+                validates your settings:</p>
+            <ul>
+                <li>At least one exchange must be selected</li>
+                <li>The output directory must exist</li>
+                <li>If a start date is provided, it must be in valid <code>YYYY-MM-DD</code> format</li>
+            </ul>
+
+            <h3>■ STOP</h3>
+
+            <p>
+                Click the red "STOP" button to gracefully terminate the download process.
+                Currently running tasks will complete before stopping—this prevents data corruption.
+            </p>
+
+            <h3>📊 Progress Bar</h3>
+
+            <p>
+                The progress bar shows overall completion percentage across all selected exchanges and all trading
+                pairs.
+                It updates in real-time as files are processed.
+            </p>
+
+            <h3>📝 Console Output</h3>
+
+            <p>The console window displays detailed status messages including:</p>
+            <ul>
+                <li><strong>Engine initialisation:</strong> Shows the selected mode and time zone settings</li>
+                <li><strong>Exchange initialisation:</strong> Reports how many perpetual markets were found on each
+                    exchange</li>
+                <li><strong>File progress:</strong> Shows each file being processed with its completion percentage</li>
+                <li><strong>Completion summary:</strong> Shows total processing time when finished</li>
+            </ul>
+
+            <div class="tip-box">
+                Files showing <span style="color: #2C3E50;">100%</span> in dark text are complete.
+                Files showing progress in <span style="color: #C0392B;">red</span> are still being processed. The console reports which "Run" (pass) and "Attempt" is currently active.
+            </div>
+        </section>
+
+        <!-- SECTION: TEXT LOGS -->
+        <section id="logs">
+            <h2>7. Text Update Logs</h2>
+
+            <p>
+                For professional record-keeping, OHLC Forge PRO generates a detailed <strong>Text Log</strong> for every session.
+            </p>
+
+            <div class="screenshot">
+                <img src="OHLC_Forge_Pro/doc_images/update_log.png" alt="Example Text Log">
+                <p class="screenshot-caption">Figure 4: A summary log file showing successful updates, retries, and failed markets</p>
+            </div>
+
+            <h3>📂 Where to find them?</h3>
+            <p>
+                A <code>Logs</code> folder is automatically created inside each exchange's data directory. Each log is named after the session start time (e.g., <code>2025-03-07_19-30-15.txt</code>).
+            </p>
+
+            <h3>📑 What's in the log?</h3>
+            <ul>
+                <li><strong>Session Metadata:</strong> Start/End timestamps, total processing duration, and Operation Mode.</li>
+                <li>
+                    <strong>Database Health:</strong> Shows the number of active markets and the "Most Recent Date" found across all files.
+                    <p style="margin-top: 8px; font-size: 0.9em; color: #666; border-left: 2px solid var(--accent); padding-left: 10px;">
+                        <strong>Note on Count Discrepancies:</strong> If the number of markets with the most recent date is lower than the total active markets, it usually means <strong>new assets were recently listed</strong>. To maintain data integrity, the application requires at least 24 hours of hourly history to form a complete daily bar. Assets with less than 24h of history will appear in your database starting from the next full session.
+                    </p>
+                </li>
+                <li><strong>Retry Tracking:</strong> Logs exactly how many attempts it took to fetch data for each market (helping you identify connection issues).</li>
+                <li><strong>Error Reports:</strong> Lists any markets that failed to update so you can target them later.</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 6: OUTPUT FORMAT & PRECISION -->
+        <section id="output-format">
+            <h2>8. Output Data Format &amp; Precision</h2>
+
+            <p>
+                OHLC Forge PRO generates standard CSV files compatible with virtually any trading software,
+                including AmiBroker, TradingView, Excel, Python (pandas), and more.
+            </p>
+
+            <h3>📋 CSV Structure</h3>
+
+            <p>Each CSV file contains the following columns (no header row):</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Format</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Date</td>
+                        <td><code>YYYYMMDD</code></td>
+                        <td>Trading day (e.g., <code>20251201</code> for 1 December 2025)</td>
+                    </tr>
+                    <tr>
+                        <td>2. Open</td>
+                        <td>Decimal</td>
+                        <td>Opening price of the daily bar</td>
+                    </tr>
+                    <tr>
+                        <td>3. High</td>
+                        <td>Decimal</td>
+                        <td>Highest price during the day</td>
+                    </tr>
+                    <tr>
+                        <td>4. Low</td>
+                        <td>Decimal</td>
+                        <td>Lowest price during the day</td>
+                    </tr>
+                    <tr>
+                        <td>5. Close</td>
+                        <td>Decimal</td>
+                        <td>Closing price of the daily bar</td>
+                    </tr>
+                    <tr>
+                        <td>6. Turnover</td>
+                        <td>Integer</td>
+                        <td>Trading volume in quote currency (USD)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>🎯 Professional Decimal Precision</h3>
+
+            <p>
+                One of OHLC Forge PRO's key advantages is its <strong>correct and official decimal precision</strong>
+                for all markets.
+                The application retrieves the official tick size (price precision) from each exchange and formats all
+                prices accordingly.
+            </p>
+
+            <div class="precision-comparison">
+                <div class="precision-box">
+                    <h4>📈 High-Price Market (BTC)</h4>
+                    <p>Bitcoin trades with <strong>1 decimal place</strong> precision:</p>
+                    <pre>20251201,90308.6,90374.4,83755.3,86244.1,12214858119
+20251202,86244.1,92298.9,86148.4,91241.7,9616542596
+20251203,91241.7,94189.4,90945.0,93390.1,9571207300
+20251204,93390.1,94058.1,90800.0,92031.8,6933686131
+20251205,92031.8,92658.3,88002.1,89273.7,8427872957</pre>
+                    <p style="margin-top: 10px; color: #666; font-size: 0.9em;">
+                        <strong>Note:</strong> All prices show exactly 1 decimal place, matching Binance's official tick
+                        size for BTCUSDT.
+                    </p>
+                </div>
+
+                <div class="precision-box">
+                    <h4>💎 Low-Price Market (Meme Coin)</h4>
+                    <p>Markets like 1000000BABYDOGEUSDT use <strong>7 decimal places</strong>:</p>
+                    <pre>20251201,0.0006972,0.0006982,0.0006300,0.0006585,1068182
+20251202,0.0006585,0.0007163,0.0006510,0.0007028,859501
+20251203,0.0007028,0.0007599,0.0007028,0.0007516,1067822
+20251204,0.0007516,0.0007654,0.0007113,0.0007137,573909
+20251205,0.0007137,0.0007195,0.0006547,0.0006754,1108743</pre>
+                    <p style="margin-top: 10px; color: #666; font-size: 0.9em;">
+                        <strong>Note:</strong> All prices show exactly 7 decimal places, including trailing zeroes
+                        (e.g., <code>0.0006300</code>) for visual consistency.
+                    </p>
+                </div>
+            </div>
+
+            <div class="success-box">
+                <h4>✅ Why This Matters</h4>
+                <ul style="margin-bottom: 0;">
+                    <li><strong>Accuracy:</strong> Prices match exactly what the exchange reports—no rounding errors
+                    </li>
+                    <li><strong>Consistency:</strong> Every price in a file has the same number of decimal places for
+                        easy reading and parsing</li>
+                    <li><strong>No Scientific Notation:</strong> Some exchanges export tiny prices as
+                        <code>6.3e-4</code>—OHLC Forge always uses standard decimal notation
+                    </li>
+                    <li><strong>Import Compatibility:</strong> Clean decimal format works perfectly with AmiBroker,
+                        TradingView, pandas, and other tools</li>
+                </ul>
+            </div>
+
+            <div class="screenshot">
+                <img src="OHLC_Forge_Pro/doc_images/sample_output_data.png" alt="Sample BTC Output Data">
+                <p class="screenshot-caption">Figure 5: Sample output for BTCUSDT with 1 decimal place precision</p>
+            </div>
+
+            <div class="screenshot">
+                <img src="OHLC_Forge_Pro/doc_images/sample_output_data2.png" alt="Sample Low-Price Token Output Data">
+                <p class="screenshot-caption">Figure 6: Sample output for a low-price token with 7 decimal places,
+                    showing trailing zeroes preserved</p>
+            </div>
+
+            <h3>🔍 Visual Verification: How UTC+3 Daily Bars Work</h3>
+
+            <p>
+                To understand exactly how OHLC Forge PRO builds daily bars from hourly data, let's examine
+                a real example using <strong>UTC+3</strong> (the recommended setting for Central European traders).
+            </p>
+
+            <div class="feature-box">
+                <h4>UTC+3 Session Timing</h4>
+                <p>With <strong>UTC+3</strong> selected, each daily bar captures a 24-hour period that:</p>
+                <ul style="margin-bottom: 0;">
+                    <li><strong>Opens</strong> at 21:00 UTC on the <em>previous</em> calendar day</li>
+                    <li><strong>Closes</strong> at 21:00 UTC on the <em>labelled</em> date</li>
+                </ul>
+                <p style="margin-top: 10px;">
+                    For example, the bar labelled <strong>2025-12-02</strong> covers the period from
+                    <strong>21:00 UTC on 1 December</strong> to <strong>21:00 UTC on 2 December</strong>.
+                </p>
+            </div>
+
+            <p>
+                The screenshot below shows an hourly chart of BTCUSDT. Notice the candle at <strong>22:00 Berlin time
+                    (21:00 UTC)</strong> on <strong>1 December 2025</strong>—this is the <em>first hour</em> of the
+                trading day labelled "2 December" in UTC+3 data. Its opening price is <strong>85,464.80</strong>.
+            </p>
+
+            <div class="screenshot">
+                <img src="OHLC_Forge_Pro/doc_images/utc_plus_3.png" alt="Hourly chart showing UTC+3 session open">
+                <p class="screenshot-caption">Figure 7: Hourly BTCUSDT chart — the candle at 22:00 Berlin (21:00 UTC) on
+                    1 December marks the start of the "2 December" daily bar in UTC+3</p>
+            </div>
+
+            <p>
+                Now look at the CSV output generated by OHLC Forge PRO with UTC+3 setting. The row for
+                <strong>20251202</strong> (2 December 2025) shows an <strong>OPEN price of 85464.8</strong>—exactly
+                matching the opening price of that 22:00 Berlin candle.
+            </p>
+
+            <div class="screenshot">
+                <img src="OHLC_Forge_Pro/doc_images/utc_plus_3_data.png" alt="CSV data showing correct OPEN price">
+                <p class="screenshot-caption">Figure 8: CSV output for BTCUSDT — the OPEN price for 2 December 2025
+                    (85464.8) matches the hourly candle from 22:00 Berlin on 1 December</p>
+            </div>
+
+            <div class="success-box">
+                <h4>✅ Verification Complete</h4>
+                <p>
+                    This confirms that OHLC Forge PRO correctly aggregates hourly data into daily bars
+                    according to your chosen time zone. The daily bar labelled "2 December" begins
+                    precisely at 21:00 UTC (22:00 Berlin) on 1 December, capturing the correct 24-hour
+                    trading session for UTC+3.
+                </p>
+            </div>
+
+            <div class="tip-box">
+                You can verify this yourself: open any trading platform showing hourly candles, find the
+                candle at your chosen session start time, and compare its opening price with the OPEN
+                value in your OHLC Forge PRO output file for that trading session's date.
+            </div>
+        </section>
+
+        <!-- SECTION 7: TIME ZONE REFERENCE -->
+        <section id="timezone-reference">
+            <h2>9. Time Zone Quick Reference</h2>
+
+            <p>
+                Find your location and recommended setting for convenient evening (21:00–22:00) data updates:
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Local Offset</th>
+                        <th>Default Close<br>(00:00 UTC)</th>
+                        <th>Problem</th>
+                        <th>Recommended<br>Setting</th>
+                        <th>New Close<br>(Local Time)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight-row">
+                        <td><img src="OHLC_Forge_Pro/doc_images/DE.svg" alt="DE" style="height: 1.2em; vertical-align: text-bottom;"> Germany</td>
+                        <td>UTC+1 / +2</td>
+                        <td>01:00 / 02:00</td>
+                        <td>🌙 Middle of night</td>
+                        <td><strong>UTC+3</strong></td>
+                        <td>✨ 22:00 / 23:00</td>
+                    </tr>
+                    <tr>
+                        <td><img src="OHLC_Forge_Pro/doc_images/GB.svg" alt="GB" style="height: 1.2em; vertical-align: text-bottom;"> UK</td>
+                        <td>UTC+0 / +1</td>
+                        <td>00:00 / 01:00</td>
+                        <td>🌙 Midnight</td>
+                        <td><strong>UTC+2</strong></td>
+                        <td>✨ 22:00 / 23:00</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><img src="OHLC_Forge_Pro/doc_images/CN.svg" alt="CN" style="height: 1.2em; vertical-align: text-bottom;"> China</td>
+                        <td>UTC+8</td>
+                        <td>08:00</td>
+                        <td>🏃 Morning rush</td>
+                        <td><strong>UTC+11</strong></td>
+                        <td>✨ 21:00</td>
+                    </tr>
+                    <tr>
+                        <td><img src="OHLC_Forge_Pro/doc_images/JP.svg" alt="JP" style="height: 1.2em; vertical-align: text-bottom;"> Japan</td>
+                        <td>UTC+9</td>
+                        <td>09:00</td>
+                        <td>💼 Work hours</td>
+                        <td><strong>UTC+12</strong></td>
+                        <td>✨ 21:00</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><img src="OHLC_Forge_Pro/doc_images/NZ.svg" alt="NZ" style="height: 1.2em; vertical-align: text-bottom;"> New Zealand</td>
+                        <td>UTC+12 / +13</td>
+                        <td>12:00 / 13:00</td>
+                        <td>🍽️ Lunch break</td>
+                        <td><strong>UTC+15</strong></td>
+                        <td>✨ 21:00 / 22:00</td>
+                    </tr>
+                    <tr>
+                        <td><img src="OHLC_Forge_Pro/doc_images/AU.svg" alt="AU" style="height: 1.2em; vertical-align: text-bottom;"> Sydney</td>
+                        <td>UTC+10 / +11</td>
+                        <td>10:00 / 11:00</td>
+                        <td>💼 Work hours</td>
+                        <td><strong>UTC+13</strong></td>
+                        <td>✨ 21:00 / 22:00</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><img src="OHLC_Forge_Pro/doc_images/US.svg" alt="US" style="height: 1.2em; vertical-align: text-bottom;"> Los Angeles</td>
+                        <td>UTC−8 / −7</td>
+                        <td>16:00 / 17:00</td>
+                        <td>💼 Still at work</td>
+                        <td><strong>UTC−5</strong></td>
+                        <td>✨ 21:00 / 22:00</td>
+                    </tr>
+                    <tr>
+                        <td><img src="OHLC_Forge_Pro/doc_images/US.svg" alt="US" style="height: 1.2em; vertical-align: text-bottom;"> New York</td>
+                        <td>UTC−5 / −4</td>
+                        <td>19:00 / 20:00</td>
+                        <td>🍽️ Dinner time</td>
+                        <td><strong>UTC−2</strong></td>
+                        <td>✨ 21:00 / 22:00</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><img src="OHLC_Forge_Pro/doc_images/BR.svg" alt="BR" style="height: 1.2em; vertical-align: text-bottom;"> São Paulo</td>
+                        <td>UTC−3</td>
+                        <td>21:00</td>
+                        <td>✓ Already good!</td>
+                        <td><strong>UTC+0</strong></td>
+                        <td>✨ 21:00</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <p style="margin-top: 15px; font-size: 0.9em; color: #666;">
+                <strong>Note:</strong> Times shown as "winter / summer" for locations with Daylight Saving Time.
+                The second time in each cell applies during DST (summer time).
+            </p>
+
+            <div class="warning-box">
+                <h4>⚠️ Important: UTC Offsets Are Fixed, Your Local Time Changes</h4>
+                <p>
+                    The time zone settings in OHLC Forge (e.g., UTC+3) are <strong>fixed UTC offsets</strong>,
+                    not dynamic time zones that adjust for Daylight Saving Time (DST).
+                </p>
+                <p>
+                    This means that if you select <strong>UTC+3</strong> (bar closes at 21:00 UTC):
+                </p>
+                <ul>
+                    <li><strong>Winter (e.g., Berlin = UTC+1):</strong> 21:00 UTC = <strong>22:00</strong> local time
+                    </li>
+                    <li><strong>Summer (e.g., Berlin = UTC+2):</strong> 21:00 UTC = <strong>23:00</strong> local time
+                    </li>
+                </ul>
+                <p>
+                    The daily bar always closes at exactly the same moment in UTC. However,
+                    <strong>your local clock time for that moment will shift by 1 hour</strong>
+                    when your region switches between standard time and daylight saving time.
+                </p>
+                <p>
+                    Plan your daily routine accordingly — your data update time will be one hour later
+                    (in local time) during summer months in DST regions.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 8: WORKFLOW EXAMPLES -->
+        <section id="workflow">
+            <h2>10. Typical Workflow Examples</h2>
+
+            <h3>📋 Example 1: Initial Setup (First Time Use)</h3>
+
+            <ol>
+                <li>Launch the application using <code>Launch_OHLC_Forge_PRO.exe</code></li>
+                <li>Select both exchanges: ☑ Binance Futures ☑ Bybit Unified</li>
+                <li>Browse and select <strong>separate</strong> folders for both Binance and Bybit</li>
+                <li>Choose your preferred time zone (e.g., <code>UTC+3</code> for European evening close)</li>
+                <li>Select <strong>"Redownload"</strong> mode</li>
+                <li>Leave "Start Date" empty (will download from 1 January 2020)</li>
+                <li>Click <strong>▶ START PROCESS</strong></li>
+                <li>Wait for completion (Optimized: only <strong>10–20 minutes</strong> for the whole database)</li>
+            </ol>
+
+            <h3>📋 Example 2: Daily Update Routine</h3>
+
+            <ol>
+                <li>Launch the application using <code>Launch_OHLC_Forge_PRO.exe</code> (settings are saved from last session)</li>
+                <li>Ensure <strong>"Update"</strong> mode is selected</li>
+                <li>Click <strong>▶ START PROCESS</strong></li>
+                <li>Wait for completion (typically 2–5 minutes)</li>
+                <li>Your data files include today's completed bar</li>
+            </ol>
+
+            <h3>📋 Example 3: Fixing Data After an Interrupted Download</h3>
+
+            <ol>
+                <li>Launch the application using <code>Launch_OHLC_Forge_PRO.exe</code></li>
+                <li>Select <strong>"Fill Gaps"</strong> mode</li>
+                <li>Optionally set a "Start Date" to limit the scan range</li>
+                <li>Click <strong>▶ START PROCESS</strong></li>
+                <li>The application will find and download any missing days, then sort all files</li>
+            </ol>
+
+            <h3>📋 Example 4: Changing Your Time Zone Setting</h3>
+
+            <div class="warning-box">
+                ⚠️ If you change your time zone setting, you should rebuild all data files to maintain consistency.
+            </div>
+
+            <ol>
+                <li>Launch the application using <code>Launch_OHLC_Forge_PRO.exe</code></li>
+                <li>Select your new time zone from the dropdown</li>
+                <li>Select <strong>"Redownload"</strong> mode</li>
+                <li>Set "Start Date" to the earliest date you need (or leave empty for full rebuild)</li>
+                <li>Click <strong>▶ START PROCESS</strong></li>
+                <li>All data from the start date onwards will be recalculated with the new time zone</li>
+            </ol>
+        </section>
+
+        <!-- SECTION 9: FAQ -->
+        <section id="faq">
+            <h2>11. Frequently Asked Questions</h2>
+
+            <h3>Will my trading system perform differently with custom time zone data?</h3>
+            <p>
+                Results should be <strong>very similar</strong>, though minor differences are expected.
+                The underlying price movements are the same—you're just slicing the 24-hour periods
+                at different points. If your backtest results change <em>significantly</em> when shifting
+                the daily bar close time by a few hours, this is a strong indicator that your system
+                may be <strong>overfitted (curve-fitted)</strong> to specific data artefacts rather than
+                capturing genuine market behaviour.
+            </p>
+
+            <h3>Why do exchanges use UTC+0 by default?</h3>
+            <p>
+                UTC (Coordinated Universal Time) is the international standard for timekeeping.
+                It's neutral and doesn't favour any particular region. However, "neutral" for the world
+                often means "inconvenient" for individual traders who need to act on the data every day.
+            </p>
+
+            <h3>Can I use multiple time zone settings for the same symbols?</h3>
+            <p>
+                Yes! You can run the tool multiple times with different settings and save to different folders
+                if you wish to compare or use multiple time zone versions of your data.
+            </p>
+
+            <h3>What about weekends? Crypto trades 24/7.</h3>
+            <p>
+                Correct—crypto markets never close. Your daily bars will be continuous,
+                including Saturday and Sunday. The time zone setting simply determines
+                when each 24-hour period begins and ends.
+            </p>
+
+            <h3>How is this different from simply using exchange data?</h3>
+            <p>
+                Exchange data only provides UTC+0 daily bars (closing at midnight UTC).
+                OHLC Forge downloads hourly data and reconstructs daily bars according to your chosen time zone.
+                This is the <strong>only</strong> way to obtain custom time zone daily data for crypto.
+            </p>
+
+            <h3>Why does the application use hourly data instead of daily data?</h3>
+            <p>
+                Daily data from exchanges is pre-aggregated to UTC+0. To create custom time zone daily bars,
+                the application must download hourly OHLCV data and then aggregate it into daily bars
+                based on your specified session times. This is more data-intensive but is the only accurate method.
+            </p>
+
+            <h3>My settings are remembered—where are they stored?</h3>
+            <p>
+                Settings are saved to <code>settings.json</code> located inside the <code>OHLC_Forge_Pro</code> subfolder.
+                This includes your selected exchanges, output folder, time zone, operation mode, and start date.
+            </p>
+            <div class="tip-box">
+                <strong>Write Permissions:</strong> If your settings are not being saved, ensure the application folder is not in a restricted location (like <code>C:\Program Files\</code>) or run the program as Administrator to grant it write access.
+            </div>
+
+            <h3>What happens if my download is interrupted?</h3>
+            <p>
+                Use <strong>"Fill Gaps"</strong> mode to scan for any missing days and download only what's needed.
+                The application is designed to be resumable—you won't lose completed work.
+            </p>
+        </section>
+
+        <!-- SECTION 10: LEGAL DISCLAIMER -->
+        <section id="disclaimer" style="background: #fff8e8; border: 2px solid #f0c36d;">
+            <h2 style="color: #856404; border-bottom-color: #f0c36d;">12. Legal Disclaimer and Terms of Use</h2>
+
+            <p style="margin-bottom: 15px;">
+                <strong>1. Software Tool Nature:</strong> OHLC Forge PRO ("the Software") is a technical utility
+                designed solely to facilitate the downloading and processing of public market data. The Software
+                is sold strictly as a data processing tool. It does not contain, resell, or distribute any
+                financial market data, historical price data, or exchange feeds.
+            </p>
+
+            <p style="margin-bottom: 15px;">
+                <strong>2. Third-Party Libraries:</strong> The Software utilises the open-source CCXT library
+                (MIT Licence) to interface with cryptocurrency exchanges. CCXT is an independent project and
+                is not affiliated with OHLC Forge PRO.
+            </p>
+
+            <p style="margin-bottom: 15px;">
+                <strong>3. User-Initiated Data Access:</strong> All data processed by the Software is downloaded
+                directly by the user from third-party exchanges (e.g., Binance, Bybit) using their public
+                Application Programming Interfaces (APIs). The Software acts merely as an interface to execute
+                these requests on the user's behalf and on the user's local machine.
+            </p>
+
+            <p style="margin-bottom: 15px;">
+                <strong>4. User Responsibility:</strong> You, the user, acknowledge that you are accessing these
+                APIs directly. It is your sole responsibility to ensure that your use of these APIs, including
+                the frequency and purpose of data requests, complies with the respective Terms of Service,
+                API Usage Policies, and rate limits as published by each exchange. Violations of exchange rate
+                limits may result in temporary or permanent API access restrictions imposed by the exchange,
+                for which the developer bears no responsibility.
+            </p>
+
+            <p style="margin-bottom: 15px;">
+                <strong>5. No Affiliation:</strong> OHLC Forge PRO is an independent software product and is not
+                affiliated with, endorsed by, sponsored by, or in any way officially connected with Binance,
+                Bybit, CCXT, or any of their subsidiaries or affiliates. "Binance" and "Bybit" are registered
+                trademarks of their respective owners.
+            </p>
+
+            <p style="margin-bottom: 15px;">
+                <strong>6. No Financial Advice & "As Is" Warranty:</strong> This Software is provided "as is",
+                without warranty of any kind, express or implied. The developer makes no representations or
+                warranties regarding the accuracy, completeness, or reliability of the data fetched by the Software.
+                Nothing in this product or documentation constitutes financial, investment, or trading advice.
+                Past performance of any trading system does not guarantee future results.
+            </p>
+
+            <p style="margin-bottom: 15px;">
+                <strong>7. LIMITATION OF LIABILITY:</strong> IN NO EVENT SHALL THE DEVELOPER, COPYRIGHT HOLDERS,
+                OR CONTRIBUTORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, OR
+                PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, OR USE, ARISING OUT OF
+                OR IN CONNECTION WITH THE USE OF THIS SOFTWARE, REGARDLESS OF THE CAUSE OF ACTION OR THE
+                THEORY OF LIABILITY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p><strong>OHLC Forge PRO</strong> — Daily Bars for Crypto Perpetuals in Your Time Zone</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">Made for systematic crypto traders worldwide</p>
+        <p style="margin-top: 10px; font-size: 0.85em; color: #999;">© 2025–2026</p>
+    </footer>
+
+</body>
+
+</html>
