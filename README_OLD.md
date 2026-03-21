@@ -1,36 +1,7 @@
-<p align="center">
-  <img src="images/OHLC_Forge_Logo.png" width="400" alt="OHLC Forge Logo">
-</p>
+﻿# OHLC Forge PRO
+# Daily Bars for Crypto Perpetuals in Your Time Zone
 
-# OHLC Forge
-### Professional OHLCV Data Reconstruction for Crypto Traders
-
-Build your own historical daily data database for Binance and Bybit perpetual markets with **custom session close times**. No more midnight alarms – trade on your own schedule.
-
----
-
-## ⚡ Quick Navigation
-
-| [🚀 Get OHLC Forge PRO (Gumroad)](https://gumroad.com/l/ohlc-forge) | [🎁 Download FREE Demo (.exe)](https://github.com/tomkam1702/OHLC-Forge/releases) | [📖 Full User Guide (Online)](https://tomkam1702.github.io/OHLC-Forge/) |
-| :--- | :--- | :--- |
-
----
-
-## 📊 Free vs PRO Comparison
-
-Experience the power of custom time zones. Start with the Free Demo and upgrade when you're ready for the full market.
-
-| Feature | FREE Demo | OHLC Forge PRO |
-| :--- | :--- | :--- |
-| **Exchanges** | Binance, Bybit | **Binance, Bybit** |
-| **Supported Symbols** | BTC/USDT, ETH/USDT | **All (600+) Perpetual Pairs** |
-| **Daily Bar Time Zone** | Forced UTC±0 | **40 Options (UTC-20 to UTC+20)** |
-| **Reconstruction Method** | Simple 1d Fetch | **Precise 1h Reconstruction** |
-| **Operation Modes** | Update, Fill Gaps, Redownload | **Update, Fill Gaps, Redownload** |
-| **Multi-threading** | Yes | **Yes (High Performance)** |
-| **DPI-Aware UI** | Yes | **Yes** |
-
----
+Build the entire historical daily data database for Bybit and Binance perpetual markets and set your own session open and close times.
 
 ![OHLC Forge Banner](images/whole_window_new.png)
 
@@ -129,7 +100,7 @@ Find your location and recommended setting for evening (21:00–22:00) data upda
 | <img src="images/GB.svg" alt="GB" height="20" align="absmiddle"><br>**London** | UTC+0 / +1 | 00:00 / 01:00 | 🌙 Midnight | **UTC+2** | ✨ 22:00 / 23:00 |
 | <img src="images/CN.svg" alt="CN" height="20" align="absmiddle"><br>**Beijing** | UTC+8 | 08:00 | 🏃 Morning rush | **UTC+11** | ✨ 21:00 |
 | <img src="images/JP.svg" alt="JP" height="20" align="absmiddle"><br>**Tokyo** | UTC+9 | 09:00 | 💼 Work hours | **UTC+12** | ✨ 21:00 |
-| <img src="images/NZ.svg" alt="NZ" height="20" align="absmiddle"><br>**Wellington** | UTC+12 / +13 | 12:00 / 13:00 | 🍽️ lunch break | **UTC+15** | ✨ 21:00 / 22:00 |
+| <img src="images/NZ.svg" alt="NZ" height="20" align="absmiddle"><br>**Wellington** | UTC+12 / +13 | 12:00 / 13:00 | 🍽️ Lunch break | **UTC+15** | ✨ 21:00 / 22:00 |
 | <img src="images/AU.svg" alt="AU" height="20" align="absmiddle"><br>**Sydney** | UTC+10 / +11 | 10:00 / 11:00 | 💼 Work hours | **UTC+13** | ✨ 21:00 / 22:00 |
 | <img src="images/US.svg" alt="US" height="20" align="absmiddle"><br>**Los Angeles** | UTC-8 / -7 | 16:00 / 17:00 | 💼 Still at work | **UTC-5** | ✨ 21:00 / 22:00 |
 | <img src="images/US.svg" alt="US" height="20" align="absmiddle"><br>**New York** | UTC-5 / -4 | 19:00 / 20:00 | 🍽️ Dinner time | **UTC-2** | ✨ 21:00 / 22:00 |
@@ -188,3 +159,5 @@ Stop staying up late or missing signals. Get daily crypto data that closes when 
 5. **No Affiliation:** OHLC Forge PRO is an independent software product and is not affiliated with Binance, Bybit, or CCXT.
 6. **No Financial Advice & "As Is" Warranty:** This Software is provided "as is". Nothing in this product constitutes financial advice. Past performance does not guarantee future results.
 7. **LIMITATION OF LIABILITY:** IN NO EVENT SHALL THE DEVELOPER BE LIABLE FOR ANY DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE USE OF THIS SOFTWARE.
+
+
