@@ -7,6 +7,16 @@
 
 Build your own historical OHLC daily data database for Binance and Bybit perpetual markets with **custom session close times**. No more midnight alarms – trade on your own schedule.
 
+> [!NOTE]
+> **⏰ How Custom Session Timing Works**
+> By selecting the correct offset, you force the daily bar to close during your comfortable local evening, rather than at midnight UTC. This allows you to download data and run your trading system at a normal hour. For example, the bar labelled **`2025-12-02`** covers:
+> 
+> | Setting | 24-Hour Period (UTC) | Daily Bar Open / Close (Local Time) |
+> | :--- | :--- | :--- |
+> | **UTC+3** | `1 Dec 21:00 UTC` → `2 Dec 21:00 UTC` | **22:00** (Europe/Berlin, CET) |
+> | **UTC+12** | `1 Dec 12:00 UTC` → `2 Dec 12:00 UTC` | **21:00** (Asia/Tokyo, JST) |
+> | **UTC+13** | `1 Dec 11:00 UTC` → `2 Dec 11:00 UTC` | **21:00 / 22:00** (Australia/Sydney) |
+
 ---
 
 ## ⚡ Quick Navigation
