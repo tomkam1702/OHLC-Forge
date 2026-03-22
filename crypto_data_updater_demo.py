@@ -35,7 +35,7 @@ def get_scale_factor():
     resolution_factor = raw_screen_width / 1920
     return resolution_factor / device_pixel_ratio
 
-# --- ŚCIEŻKI I KONFIGURACJA ---
+# --- PATHS AND CONFIGURATION ---
 def get_app_dir():
     """Returns the directory where the application is located.
     
@@ -79,7 +79,7 @@ BASE_BORDER_RADIUS_LARGE = 6
 BASE_GROUP_MARGIN_TOP = 14
 BASE_SCROLLBAR_WIDTH = 14
 
-# --- KLASA LOGIKI BIZNESOWEJ (BACKEND) ---
+# --- BUSINESS LOGIC CLASS (BACKEND) ---
 
 def get_icon_from_base64():
     """Decodes the base64 icon and returns a QIcon object."""
@@ -622,7 +622,7 @@ class UpdateWorker(QThread):
                         f.write("\n\n")
 
                     if results_to_log:
-                        # Pomocnicze funkcje do wyrównania szerokich znaków (np. chińskich)
+                        # Helper functions to align wide characters (e.g. Chinese)
                         def visual_len(text):
                             return sum(1.5 if unicodedata.east_asian_width(c) in 'WF' else 1 for c in text)
 
@@ -669,7 +669,7 @@ class CenteredComboBox(QComboBox):
             # Ensure the selected item is positioned in the center of the list view if possible
             self.view().scrollTo(self.model().index(idx, 0), QAbstractItemView.ScrollHint.PositionAtCenter)
 
-# --- GUI: OKNO GŁÓWNE Z DPI SCALING ---
+# --- GUI: MAIN WINDOW WITH DPI SCALING ---
 
 class MainWindow(QMainWindow):
     def __init__(self):
