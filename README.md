@@ -13,9 +13,9 @@ Build your own historical OHLC daily data database for Binance and Bybit perpetu
 > 
 > | Setting | 24-Hour Period (UTC) | 24-Hour Period (Local Time) |
 > | :--- | :--- | :--- |
-> | **UTC+3** | `1 Dec 21:00 UTC` → `2 Dec 21:00 UTC` | `1 Dec 22:00` → `2 Dec 22:00` (Europe/Berlin, CET) |
-> | **UTC+12** | `1 Dec 12:00 UTC` → `2 Dec 12:00 UTC` | `1 Dec 21:00` → `2 Dec 21:00` (Asia/Tokyo, JST) |
-> | **UTC+13** | `1 Dec 11:00 UTC` → `2 Dec 11:00 UTC` | `1 Dec 21:00 / 22:00` → `2 Dec 21:00 / 22:00` (Australia/Sydney) |
+> | **UTC+4** | `1 Dec 20:00` →<br>`2 Dec 20:00 (UTC)` | `1 Dec 21:00` →<br>`2 Dec 21:00 (Berlin, CET)` |
+> | **UTC+11** | `1 Dec 13:00` →<br>`2 Dec 13:00 (UTC)` | `1 Dec 22:00` →<br>`2 Dec 22:00 (Tokyo, JST)` |
+> | **UTC+13** | `1 Dec 11:00` →<br>`2 Dec 11:00 (UTC)` | `1 Dec 22:00` →<br>`2 Dec 22:00 (Sydney)` |
 
 ---
 
@@ -116,9 +116,9 @@ See how the default 00:00 UTC close time affects traders in different locations,
 
 ### <img src="images/DE.svg" alt="DE" height="20" align="absmiddle"> Hans from Berlin (Germany, CET = UTC+1)
 *   **Default UTC+0:** `01:00` (middle of the night)
-*   **With OHLC Forge:** `22:00` (relaxed evening)
-> *"I was setting alarms for 1 AM every night. Now I update my data at 10 PM and sleep well."*
-> **Recommended: UTC+3**
+*   **With OHLC Forge:** `21:00` (relaxed evening)
+> *"I was setting alarms for 1 AM every night. Now I update my data at 9 PM and sleep well."*
+> **Recommended: UTC+4**
 
 ### <img src="images/CN.svg" alt="CN" height="20" align="absmiddle"> Wei from Shanghai (China, CST = UTC+8)
 *   **Default UTC+0:** `08:00` (morning rush hour)
@@ -146,10 +146,10 @@ Find your location and recommended setting for evening (21:00–22:00) data upda
 
 | Location | Local Offset | Default Close (00:00 UTC) | Problem | Recommended Setting | New Close (Local Time) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| <img src="images/DE.svg" alt="DE" height="20" align="absmiddle"><br>**Berlin** | UTC+1 / +2 | 01:00 / 02:00 | 🌙 Middle of night | **UTC+3** | ✨ 22:00 / 23:00 |
-| <img src="images/GB.svg" alt="GB" height="20" align="absmiddle"><br>**London** | UTC+0 / +1 | 00:00 / 01:00 | 🌙 Midnight | **UTC+2** | ✨ 22:00 / 23:00 |
+| <img src="images/DE.svg" alt="DE" height="20" align="absmiddle"><br>**Berlin** | UTC+1 / +2 | 01:00 / 02:00 | 🌙 Middle of night | **UTC+4** | ✨ 21:00 / 22:00 |
+| <img src="images/GB.svg" alt="GB" height="20" align="absmiddle"><br>**London** | UTC+0 / +1 | 00:00 / 01:00 | 🌙 Midnight | **UTC+3** | ✨ 21:00 / 22:00 |
 | <img src="images/CN.svg" alt="CN" height="20" align="absmiddle"><br>**Beijing** | UTC+8 | 08:00 | 🏃 Morning rush | **UTC+11** | ✨ 21:00 |
-| <img src="images/JP.svg" alt="JP" height="20" align="absmiddle"><br>**Tokyo** | UTC+9 | 09:00 | 💼 Work hours | **UTC+12** | ✨ 21:00 |
+| <img src="images/JP.svg" alt="JP" height="20" align="absmiddle"><br>**Tokyo** | UTC+9 | 09:00 | 💼 Work hours | **UTC+11** | ✨ 22:00 |
 | <img src="images/NZ.svg" alt="NZ" height="20" align="absmiddle"><br>**Wellington** | UTC+12 / +13 | 12:00 / 13:00 | 🍽️ lunch break | **UTC+15** | ✨ 21:00 / 22:00 |
 | <img src="images/AU.svg" alt="AU" height="20" align="absmiddle"><br>**Sydney** | UTC+10 / +11 | 10:00 / 11:00 | 💼 Work hours | **UTC+13** | ✨ 21:00 / 22:00 |
 | <img src="images/US.svg" alt="US" height="20" align="absmiddle"><br>**Los Angeles** | UTC-8 / -7 | 16:00 / 17:00 | 💼 Still at work | **UTC-5** | ✨ 21:00 / 22:00 |
