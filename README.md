@@ -53,7 +53,11 @@ Experience the power of custom time zones. Start with the Free Demo and upgrade 
 
 ---
 
-![OHLC Forge Banner](images/whole_window_new.png)
+<p align="center">
+  <video src="./images/promo_video2.mp4" autoplay loop muted playsinline controls width="100%"></video>
+</p>
+
+---
 
 ### Precise Configuration
 Choose from **40 different time zone offsets** (from UTC-20 to UTC+20) to perfectly match your local evening routine.
