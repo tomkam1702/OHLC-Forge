@@ -37,6 +37,12 @@ Build your own historical OHLC daily data database for Binance and Bybit perpetu
 
 ---
 
+<p align="center">
+  <img src="images/GUI.png" width="100%" alt="OHLC Forge GUI">
+</p>
+
+---
+
 ## 📊 Free vs PRO Comparison
 
 Experience the power of custom time zones. Start with the Free Demo and upgrade when you're ready for the full market.
