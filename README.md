@@ -13,6 +13,7 @@ Build your own historical OHLC daily data database for Binance and Bybit perpetu
 > 
 > | Setting | 24-Hour Period (UTC) | 24-Hour Period (Local Time) |
 > | :--- | :--- | :--- |
+> | **UTC** | `2 Dec 0:00` →<br>`3 Dec 0:00 (UTC)` | |
 > | **UTC+4** | `1 Dec 20:00` →<br>`2 Dec 20:00 (UTC)` | `1 Dec 21:00` →<br>`2 Dec 21:00 (Berlin, CET)` |
 > | **UTC+11** | `1 Dec 13:00` →<br>`2 Dec 13:00 (UTC)` | `1 Dec 22:00` →<br>`2 Dec 22:00 (Tokyo, JST)` |
 > | **UTC+13** | `1 Dec 11:00` →<br>`2 Dec 11:00 (UTC)` | `1 Dec 22:00` →<br>`2 Dec 22:00 (Sydney, AEDT)` |
