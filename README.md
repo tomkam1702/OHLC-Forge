@@ -53,11 +53,7 @@ Experience the power of custom time zones. Start with the Free Demo and upgrade 
 
 ---
 
-<p align="center">
-  <video width="100%" autoplay loop muted playsinline controls>
-    <source src="https://raw.githubusercontent.com/tomkam1702/OHLC-Forge/main/images/promo_video2.mp4" type="video/mp4">
-  </video>
-</p>
+https://github.com/user-attachments/assets/5db0790c-0a76-4536-b61b-d12a95ba625b
 
 ---
 
