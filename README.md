@@ -38,7 +38,7 @@ Build your own historical OHLC daily data database for Binance and Bybit perpetu
 ---
 
 <p align="center">
-  <img src="images/GUI.png" width="100%" alt="OHLC Forge GUI">
+  <img src="images/GUI.png" width="70%" alt="OHLC Forge GUI">
 </p>
 
 ---
